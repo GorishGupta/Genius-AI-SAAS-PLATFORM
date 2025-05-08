@@ -14,10 +14,10 @@ export async function POST(req: NextRequest) {
     }
 
     // Initialize the Gemini API client
-    const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY || "");
+    const genAI = new GoogleGenerativeAI(process.env.GOOGLE_API_KEY || "");
 
-    if (!process.env.GEMINI_API_KEY) {
-      console.error("GEMINI_API_KEY is not defined");
+    if (!process.env.GOOGLE_API_KEY) {
+      console.error("GOOGLE_API_KEY is not defined");
       return NextResponse.json(
         {
           message: "API configuration error. Please check server logs.",

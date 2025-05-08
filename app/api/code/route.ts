@@ -1,8 +1,7 @@
 import { type NextRequest, NextResponse } from "next/server";
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
-// Initialize the Google Generative AI client
-const genAI = new GoogleGenerativeAI(process.env.GOOGLE_API_KEY || "");
+// Initialize the Google Generative AI client when needed, not globally
 
 export async function POST(req: NextRequest) {
   try {
@@ -18,6 +17,9 @@ export async function POST(req: NextRequest) {
 
     // Get the last message from the user
     const lastMessage = messages[messages.length - 1];
+
+    // Initialize the Google Generative AI client
+    const genAI = new GoogleGenerativeAI(process.env.GOOGLE_API_KEY || "");
 
     // If API key is not set, return a fallback response
     if (!process.env.GOOGLE_API_KEY) {
