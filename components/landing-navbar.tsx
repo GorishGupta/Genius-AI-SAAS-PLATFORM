@@ -1,6 +1,5 @@
 "use client";
 
-import { useAuth } from "@clerk/nextjs";
 import { Github } from "lucide-react";
 import { Montserrat } from "next/font/google";
 import Image from "next/image";
@@ -16,7 +15,8 @@ const font = Montserrat({
 });
 
 export const LandingNavbar = () => {
-  const { isSignedIn } = useAuth();
+  // Temporarily hardcode this value until auth is set up
+  const isSignedIn = false;
 
   return (
     <nav className="p-4 bg-transparent flex items-center justify-between">

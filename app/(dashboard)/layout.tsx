@@ -2,12 +2,11 @@ import type { PropsWithChildren } from "react";
 
 import { Navbar } from "@/components/navbar";
 import { Sidebar } from "@/components/sidebar";
-import { getApiLimitCount } from "@/lib/api-limit";
-import { checkSubscription } from "@/lib/subscription";
 
 const DashboardLayout = async ({ children }: PropsWithChildren) => {
-  const apiLimitCount = await getApiLimitCount();
-  const isPro = await checkSubscription();
+  // Temporarily hardcode these values until auth is set up
+  const apiLimitCount = 0;
+  const isPro = false;
 
   return (
     <div className="h-full relative">
@@ -15,7 +14,7 @@ const DashboardLayout = async ({ children }: PropsWithChildren) => {
         <Sidebar apiLimitCount={apiLimitCount} isPro={isPro} />
       </div>
 
-      <main className="md:md:pl-72">
+      <main className="md:pl-72">
         <Navbar />
         {children}
       </main>
