@@ -9,11 +9,6 @@
     "lint": "next lint",
     "postinstall": "prisma generate"
   },
-  "author": {
-    "name": "Sanidhya Kumar Verma",
-    "email": "sanidhya.verma12345@gmail.com",
-    "url": "https://github.com/sanidhyy"
-  },
   "description": "The connected workspace where better, faster work happens.",
   "keywords": [
     "reactjs",
@@ -66,17 +61,7 @@
     "url": "https://github.com/sanidhyy/genius-ai/issues",
     "email": "sanidhya.verma12345@gmail.com"
   },
-  "funding": [
-    {
-      "type": "patreon",
-      "url": "https://www.patreon.com/sanidhy"
-    },
-    {
-      "type": "Buy me a coffee",
-      "url": "https://www.buymeacoffee.com/sanidhy"
-    }
-  ],
-  "dependencies": {
+    "dependencies": {
     "@clerk/nextjs": "^4.31.5",
     "@google/generative-ai": "^0.24.1",
     "@hookform/resolvers": "^3.3.4",
